@@ -1,75 +1,79 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins",sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
-.header{
-    width: 100%;
-    height: 100vh;
-    padding: 10px 10%;
-    background: #020412;
-    color: #fff;
-    padding: 0, 8.5%;
-    position: relative;
+.header {
+  width: 100%;
+  height: 100vh;
+  padding: 10px 10%;
+  background: #020412;
+  color: #fff;
+  padding: 0, 8.5%; /*Gives Padding to the Header*/
+  position: relative;
 }
 
+/* Designing the NAV BAR */
+nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 30px, 0, 10px;
+}
+/* Designing the NAME in the Nav */
+nav h1 {
+  font-size: 30px;
+  color: yellow;
+  cursor: pointer;
+}
 
-nav{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding: 30px, 0, 10px;
-}
-nav h1{
-    font-size: 30px;    
-    color: yellow;
-    cursor: pointer;
-}
 nav ul li {
-    display: inline-block;
-    list-style: none;
-  margin: 10px 20px ;
-    
+  display: inline-block; /*Makes the items in the line here we can give the margin and other porperties*/
+  list-style: none;
+  margin: 10px 20px;
+}
+/* Styling the first child i.e HOME */
+nav li:first-child {
+  margin-left: 250px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
 }
 
-nav li:first-child  {
-    margin-left: 250px;
-}
-nav ul li a{
-    text-decoration: none;
-    color: #fff;
-    font-size: 18px;
-    font-weight: 600;
+.menu-icon {
+  width: 30px;
 }
 
-.menu-icon{
-    width: 30px;
+.content {
+  margin-top: 200px;
+}
+.content-1 h1 {
+  font-size: 50px;
+  font-weight: 600;
+}
+.content-1 p {
+  margin-top: 30px;
+  max-width: 450px;
+  text-align: justify;
 }
 
-.content{
-    margin-top: 200px;
+.btns {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  max-width: 26vw; /*giving the MAX WIDTH */
 }
-.content-1 h1{
-    font-size: 50px;
-    font-weight: 600;
-}
-.content-1 p{
-    margin-top: 30px;
-    max-width: 450px;
-    text-align: justify;
-}
-.btns{
-    margin-top: 30px;
-    display: flex;
-    justify-content: space-between;
-    max-width: 26vw;
-}
-.btns a{
-    display: inline-block;
+
+/*Styling the buttons*/
+.btns a {
+  display: inline-block;
   text-decoration: none;
   color: yellow;
   background: black;
@@ -79,19 +83,37 @@ nav ul li a{
   border-radius: 6px;
   width: fit-content;
 }
-.btns :nth-child(2){
-    background-color: yellow;
-    color: black;
-    font-weight: 600 ;
+
+/*Designing the nth Child i.e second Button */
+.btns :nth-child(2) {
+  background-color: yellow;
+  color: black;
+  font-weight: 600;
 }
 
-.user-img{
- width: 400px;
- position: absolute;
- right: 10%;
- bottom: 10%;
- left : 600px;
-}
+/* Adding CSS to the Image */
 .user-img {
-    border-radius: 20px;
+  width: 380px;
+  position: absolute;
+  right: 10%;
+  bottom: 10%;
+  left: 600px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px #fff;
+  margin-left: 5vw;
+  transition: 0.3s ease-in-out;   /*Adding Transition to the Image i.e slight zoom in while hover*/
+  /* animation: zoom 1s forwards !important; */
+}
+
+/* @keyframes zoom {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+} */
+
+.user-img:hover {
+  transform: scale(1.1);  /*Zoom OUT Propety*/
 }
